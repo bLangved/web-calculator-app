@@ -1,0 +1,44 @@
+{
+  "name": "web-calculator-app",
+  "version": "0.0.1",
+  "description": "A broswer based calculator app ",
+  "main": "src/index.js",
+  "scripts": {
+    "scss": "sass --watch scss/style.scss:css/style.css",
+    "watch-scss": "sass --watch scss:css",
+    "test": "node src/**/*.js",
+    "format": "prettier -w src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bLangved/web-calculator-app.git"
+  },
+  "keywords": [
+    "portfolio-project"
+  ],
+  "author": "Bjørnar Heian Langved <b.langved@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bLangved/web-calculator-app/issues"
+  },
+  "homepage": "https://github.com/bLangved/web-calculator-app#readme",
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}
