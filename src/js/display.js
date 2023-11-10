@@ -12,6 +12,10 @@ export function updateDisplay(number) {
   } else {
     CalcElements.display.textContent += number;
   }
+  if (CalcElements.display.textContent.length > 10) {
+    CalcElements.display.textContent =
+      CalcElements.display.textContent.substring(0, 10);
+  }
 }
 
 /**

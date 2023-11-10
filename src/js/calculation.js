@@ -47,7 +47,13 @@ export function calculate() {
       return;
   }
 
-  CalcElements.display.textContent = result.toString();
+  let resultString = result.toString();
+
+  if (resultString.length > 10) {
+    // Scientific notation (with 4 digits precision) if number becomes too big
+    resultString = result.toExponential(4);
+  }
+  CalcElements.display.textContent = resultString;
   setFirstNumber(null);
   setNewEntry(true);
 }
