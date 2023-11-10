@@ -1,5 +1,28 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
 }
 
 html {
@@ -15,54 +38,81 @@ html {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  color-scheme: dark light;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  //   min-height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, rgb(92, 0, 92), rgb(0, 0, 112));
+  display: grid;
+  grid-template-rows: 1em auto 1em;
+  grid-template-areas:
+    "header"
+    "aside main"
+    "footer";
 }
 
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 15vh;
-
+  justify-content: center;
+  grid-area: "header";
+  margin-top: 2em;
   > * {
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: bold;
     color: rgb(250, 250, 250);
   }
 }
 
 main {
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-area: "main";
+}
+
+aside {
+  grid-area: "aside";
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: "footer";
+
+  > * {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(250, 250, 250);
+    margin-bottom: 2em;
+  }
 }
 
 .interface-container {
-  min-width: 15em;
-  width: 80vw;
-  min-height: 20em;
+  width: 90%;
   height: auto;
   border-radius: 0.5em;
   padding: 1.5em;
   background-color: rgb(60, 60, 60);
   box-shadow: 2px 2px 5px black;
 
+  @media (min-width: 480px) {
+    // width: 27em;
+  }
+
   @media (min-width: 768px) {
-    width: 37.5em;
+    width: 40em;
   }
 
   @media (min-width: 1024px) {
-    width: 45em;
+    width: 50em;
   }
 }
 
-.interface-display {
+.interfaceDisplay-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -93,7 +143,7 @@ main {
 
   > * {
     min-width: 2.5em;
-    height: 2.5em;
+    min-height: 8vh;
     color: rgb(240, 240, 240);
     border: none;
     border-radius: 0.5em;
@@ -107,22 +157,8 @@ main {
     &:active {
       background-color: rgb(45, 45, 45);
     }
-
-    @media (min-width: 480px) {
-      min-width: 4em;
-      height: 4em;
-    }
   }
 }
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5vh;
-
-  > * {
-    font-weight: bold;
-    color: rgb(250, 250, 250);
-  }
+.keyboard-pressed {
+  background-color: rgb(45, 45, 45);
 }

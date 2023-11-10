@@ -23,29 +23,29 @@
 
     <main>
       <div class="interface-container">
-        <div class="interface-display">
-          <span>0</span>
+        <div class="interfaceDisplay-container">
+          <span id="interfaceDisplay">0</span>
         </div>
         <div class="numpad-container">
-          <button>C</button>
-          <button>+/-</button>
-          <button>%</button>
-          <button>÷</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>x</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>+</button>
-          <button class="double-zero">0</button>
-          <button>,</button>
-          <button>=</button>
+          <button id="btnClear">c</button>
+          <button id="btnToggleSign">+/-</button>
+          <button id="btnPercent">%</button>
+          <button id="btnDivide">÷</button>
+          <button id="btnSeven">7</button>
+          <button id="btnEight">8</button>
+          <button id="btnNine">9</button>
+          <button id="btnMultiply">x</button>
+          <button id="btnFour">4</button>
+          <button id="btnFive">5</button>
+          <button id="btnSix">6</button>
+          <button id="btnSubtract">-</button>
+          <button id="btnOne">1</button>
+          <button id="btnTwo">2</button>
+          <button id="btnThree">3</button>
+          <button id="btnAdd">+</button>
+          <button id="btnZero" class="double-zero">0</button>
+          <button id="btnDecimal">,</button>
+          <button id="btnEquals">=</button>
         </div>
       </div>
     </main>
@@ -53,7 +53,7 @@
     <footer>
       <p>&copy; 2023 BHLweb.no</p>
     </footer>
-    <script src="src/js/index.js"></script>
-    <script src="src/js/colorScheme.js"></script>
+    <script type="module" src="src/js/calculator.js"></script>
+    <script src="src/js/utilities/colorScheme.js"></script>
   </body>
 </html>
