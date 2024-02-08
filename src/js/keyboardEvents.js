@@ -84,9 +84,9 @@ export function keyboardEvents() {
         break;
     }
     if (buttonId) {
-      const button = document.getElementById(buttonId);
+      const button = document.querySelectorAll("numpad-container");
       if (button) {
-        button.classList.add("keyboard-pressed");
+        button.classList.add("key-click");
         setTimeout(() => {
           button.classList.remove("keyboard-pressed");
         }, 150);

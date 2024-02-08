@@ -1,13 +1,25 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
+:root {
+  --fs-header: 2rem;
+  --fs-subheader: 1.5rem;
+  --fs-text: 1.25rem;
+  --border-radius-small: 0.5em;
+  --border-radius-large: 1em;
+  --button-default: rgb(60, 60, 60);
+  --button-hover: rgb(53, 53, 53);
+  --button-active: rgb(45, 45, 45);
+  --color-white: rgb(250, 250, 250);
+  --color-white2: rgb(240, 240, 240);
+  --color-black: rgb(30, 30, 30);
+  --color-darkgray: rgb(60, 60, 60);
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 img,
@@ -25,16 +37,14 @@ select {
   font: inherit;
 }
 
-html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color-scheme: dark light;
-}
-
 body {
-  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   background: linear-gradient(135deg, rgb(92, 0, 92), rgb(0, 0, 112));
   display: grid;
-  grid-template-rows: 1em auto 1em;
+  grid-template-rows: 4em auto 4em;
   grid-template-areas: "header" "aside main" "footer";
 }
 
@@ -43,20 +53,19 @@ header {
   align-items: center;
   justify-content: center;
   grid-area: "header";
-  margin-top: 2em;
 }
-header > * {
+header h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--fs-header);
   font-weight: bold;
-  color: rgb(250, 250, 250);
+  color: var(--color-white);
 }
 
 main {
+  grid-area: "main";
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-area: "main";
 }
 
 aside {
@@ -64,25 +73,22 @@ aside {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   grid-area: "footer";
+  display: grid;
+  place-items: center;
 }
-footer > * {
-  font-size: 1rem;
+footer span {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(250, 250, 250);
-  margin-bottom: 2em;
+  color: var(--color-white);
 }
-
 .interface-container {
   width: 90%;
   height: auto;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius-small);
   padding: 1.5em;
-  background-color: rgb(60, 60, 60);
-  box-shadow: 2px 2px 5px black;
+  background-color: var(--color-darkgray);
+  box-shadow: 2px 2px 10px var(--color-black);
 }
 @media (min-width: 768px) {
   .interface-container {
@@ -100,9 +106,9 @@ footer > * {
   flex-direction: row-reverse;
   align-items: center;
   height: 4em;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius-small);
   margin-bottom: 1em;
-  color: rgb(240, 240, 240);
+  color: var(--color-white2);
   background-color: rgb(15, 15, 15);
 }
 .interfaceDisplay-container > * {
@@ -124,25 +130,25 @@ footer > * {
 .numpad-container .double-zero {
   grid-column: span 2;
 }
-.numpad-container > * {
+.numpad-container button {
   min-width: 2.5em;
   min-height: 8vh;
-  color: rgb(240, 240, 240);
+  color: var(--color-white2);
   border: none;
-  border-radius: 0.5em;
-  background-color: rgb(60, 60, 60);
+  border-radius: var(--border-radius-small);
+  background-color: var(--button-default);
   box-shadow: 2px 2px 5px black;
-  font-size: 1rem;
+  font-size: var(--fs-text);
 }
-.numpad-container > *:hover {
-  background-color: rgb(55, 55, 55);
+.numpad-container button:hover {
+  background-color: var(--button-hover);
 }
-.numpad-container > *:active {
-  background-color: rgb(45, 45, 45);
+.numpad-container button:active {
+  background-color: var(--button-active);
 }
 
-.keyboard-pressed {
-  background-color: rgb(45, 45, 45);
+.key-click {
+  background-color: var(--button-active);
 }
 
 /*# sourceMappingURL=style.css.map */

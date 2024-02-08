@@ -1,11 +1,10 @@
 {
   "name": "web-calculator-app",
   "version": "0.2.1",
-  "description": "A broswer based calculator app ",
+  "description": "A browser based calculator app",
   "main": "src/index.js",
   "scripts": {
-    "scss": "sass --watch scss/style.scss:css/style.css",
-    "watch-scss": "sass --watch scss:css",
+    "watch-scss": "sass --watch src/scss/style.scss:src/css/style.css",
     "test": "node src/**/*.js",
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",

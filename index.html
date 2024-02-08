@@ -4,11 +4,11 @@
     <title>Web calculator app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <link
       id="favicon"
       rel="shortcut icon"
-      href="images/calculator-icon.svg"
+      href="images/calculator_favicon.svg"
       type="image/x-icon"
     />
     <script
@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <h1 class="site-header">Bhlweb's online calculator</h1>
+      <h1>Bhlweb's online calculator</h1>
     </header>
 
     <main>
@@ -27,7 +27,7 @@
           <span id="interfaceDisplay">0</span>
         </div>
         <div class="numpad-container">
-          <button id="btnClear">c</button>
+          <button id="btnClear">C</button>
           <button id="btnToggleSign">+/-</button>
           <button id="btnPercent">%</button>
           <button id="btnDivide">÷</button>
@@ -51,9 +51,9 @@
     </main>
 
     <footer>
-      <p>&copy; 2023 BHLweb.no</p>
+      <span>Created by <a href="https://www.bhlweb.no">bhlweb.no</a></span>
     </footer>
+    <!-- <script type="module" src="src/js/index.js"></script> -->
     <script type="module" src="src/js/calculator.js"></script>
-    <script src="src/js/utilities/colorScheme.js"></script>
   </body>
 </html>
