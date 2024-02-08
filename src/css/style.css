@@ -3,9 +3,6 @@
 }
 
 :root {
-  --fs-header: 2rem;
-  --fs-subheader: 1.5rem;
-  --fs-text: 1.25rem;
   --border-radius-small: 0.5em;
   --border-radius-large: 1em;
   --button-default: rgb(60, 60, 60);
@@ -43,62 +40,49 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, rgb(92, 0, 92), rgb(0, 0, 112));
-  display: grid;
-  grid-template-rows: 4em auto 4em;
-  grid-template-areas: "header" "aside main" "footer";
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: "header";
-}
-header h1 {
-  text-align: center;
-  font-size: var(--fs-header);
-  font-weight: bold;
-  color: var(--color-white);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
 }
 
 main {
-  grid-area: "main";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-aside {
-  grid-area: "aside";
-}
-
-footer {
-  grid-area: "footer";
   display: grid;
   place-items: center;
+  height: 100%;
 }
-footer span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-white);
-}
+
 .interface-container {
-  width: 90%;
-  height: auto;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: var(--border-radius-small);
   padding: 1.5em;
   background-color: var(--color-darkgray);
   box-shadow: 2px 2px 10px var(--color-black);
 }
-@media (min-width: 768px) {
+.interface-container h1 {
+  margin: 0 0 1em;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+@media (min-width: 480px) {
   .interface-container {
-    width: 40em;
+    width: 90%;
+    max-height: 90%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .interface-container {
-    width: 50em;
+    max-width: 50em;
+    max-height: 45em;
   }
+}
+
+.interface-subcontainer {
+  width: 100%;
 }
 
 .interfaceDisplay-container {
@@ -132,13 +116,19 @@ footer span {
 }
 .numpad-container button {
   min-width: 2.5em;
-  min-height: 8vh;
+  min-height: 4em;
   color: var(--color-white2);
   border: none;
   border-radius: var(--border-radius-small);
   background-color: var(--button-default);
   box-shadow: 2px 2px 5px black;
-  font-size: var(--fs-text);
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .numpad-container button {
+    max-width: 100%;
+    height: 4em;
+  }
 }
 .numpad-container button:hover {
   background-color: var(--button-hover);
@@ -146,9 +136,22 @@ footer span {
 .numpad-container button:active {
   background-color: var(--button-active);
 }
-
-.key-click {
+.numpad-container .key-click {
   background-color: var(--button-active);
+}
+
+.product-owner {
+  display: grid;
+  place-items: center;
+  margin: 1em 0 0;
+}
+.product-owner span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+.product-owner span a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

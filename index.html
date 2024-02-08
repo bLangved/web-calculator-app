@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <title>Web calculator app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link
@@ -17,43 +21,43 @@
     ></script>
   </head>
   <body>
-    <header>
-      <h1>Bhlweb's online calculator</h1>
-    </header>
-
     <main>
       <div class="interface-container">
-        <div class="interfaceDisplay-container">
-          <span id="interfaceDisplay">0</span>
+        <h1>Bhlweb's online calculator</h1>
+        <div class="interface-subcontainer">
+          <div class="interfaceDisplay-container">
+            <span id="interfaceDisplay">0</span>
+          </div>
+          <div class="numpad-container" id="numpad">
+            <button id="btnClear">C</button>
+            <button id="btnToggleSign">+/-</button>
+            <button id="btnPercent">%</button>
+            <button id="btnDivide">÷</button>
+            <button id="btnSeven">7</button>
+            <button id="btnEight">8</button>
+            <button id="btnNine">9</button>
+            <button id="btnMultiply">x</button>
+            <button id="btnFour">4</button>
+            <button id="btnFive">5</button>
+            <button id="btnSix">6</button>
+            <button id="btnSubtract">-</button>
+            <button id="btnOne">1</button>
+            <button id="btnTwo">2</button>
+            <button id="btnThree">3</button>
+            <button id="btnAdd">+</button>
+            <button id="btnZero" class="double-zero">0</button>
+            <button id="btnDecimal">,</button>
+            <button id="btnEquals">=</button>
+          </div>
         </div>
-        <div class="numpad-container">
-          <button id="btnClear">C</button>
-          <button id="btnToggleSign">+/-</button>
-          <button id="btnPercent">%</button>
-          <button id="btnDivide">÷</button>
-          <button id="btnSeven">7</button>
-          <button id="btnEight">8</button>
-          <button id="btnNine">9</button>
-          <button id="btnMultiply">x</button>
-          <button id="btnFour">4</button>
-          <button id="btnFive">5</button>
-          <button id="btnSix">6</button>
-          <button id="btnSubtract">-</button>
-          <button id="btnOne">1</button>
-          <button id="btnTwo">2</button>
-          <button id="btnThree">3</button>
-          <button id="btnAdd">+</button>
-          <button id="btnZero" class="double-zero">0</button>
-          <button id="btnDecimal">,</button>
-          <button id="btnEquals">=</button>
+        <div class="product-owner">
+          <span>Created by <a href="https://www.bhlweb.no">bhlweb.no</a></span>
         </div>
       </div>
     </main>
 
-    <footer>
-      <span>Created by <a href="https://www.bhlweb.no">bhlweb.no</a></span>
-    </footer>
     <!-- <script type="module" src="src/js/index.js"></script> -->
     <script type="module" src="src/js/calculator.js"></script>
+    <script src="src/js/utils/preventZoom.js"></script>
   </body>
 </html>

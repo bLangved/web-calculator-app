@@ -7,89 +7,90 @@ export function keyboardEvents() {
 
     switch (event.key) {
       case "0":
-        buttonId = "btnZero";
+        buttonId = "#btnZero";
         updateDisplay("0");
         break;
       case "1":
-        buttonId = "btnOne";
+        buttonId = "#btnOne";
         updateDisplay("1");
         break;
       case "2":
-        buttonId = "btnTwo";
+        buttonId = "#btnTwo";
         updateDisplay("2");
         break;
       case "3":
-        buttonId = "btnThree";
+        buttonId = "#btnThree";
         updateDisplay("3");
         break;
       case "4":
-        buttonId = "btnFour";
+        buttonId = "#btnFour";
         updateDisplay("4");
         break;
       case "5":
-        buttonId = "btnFive";
+        buttonId = "#btnFive";
         updateDisplay("5");
         break;
       case "6":
-        buttonId = "btnSix";
+        buttonId = "#btnSix";
         updateDisplay("6");
         break;
       case "7":
-        buttonId = "btnSeven";
+        buttonId = "#btnSeven";
         updateDisplay("7");
         break;
       case "8":
-        buttonId = "btnEight";
+        buttonId = "#btnEight";
         updateDisplay("8");
         break;
       case "9":
-        buttonId = "btnNine";
+        buttonId = "#btnNine";
         updateDisplay("9");
         break;
       case "+":
-        buttonId = "btnAdd";
+        buttonId = "#btnAdd";
         setOperator("+");
         break;
       case "-":
-        buttonId = "btnSubtract";
+        buttonId = "#btnSubtract";
         setOperator("-");
         break;
       case "*":
-        buttonId = "btnMultiply";
+        buttonId = "#btnMultiply";
         setOperator("*");
         break;
       case "/":
-        buttonId = "btnDivide";
+        buttonId = "#btnDivide";
         setOperator("/");
         break;
       case ",":
-        buttonId = "btnDecimal";
+        buttonId = "#btnDecimal";
         setOperator(",");
         break;
       case "%":
-        buttonId = "btnPercent";
+        buttonId = "#btnPercent";
         setOperator("%");
         break;
       case "Enter":
       case "=":
-        buttonId = "btnEquals";
+        buttonId = "#btnEquals";
         calculate();
         break;
       case "Escape":
       case "c":
-        buttonId = "btnClear";
+        buttonId = "#btnClear";
         clearDisplay();
         break;
       default:
         break;
     }
     if (buttonId) {
-      const button = document.querySelectorAll("numpad-container");
-      if (button) {
-        button.classList.add("key-click");
+      console.log(buttonId);
+      const btn = document.querySelector(buttonId);
+      if (btn) {
+        btn.classList.add("key-click");
         setTimeout(() => {
-          button.classList.remove("keyboard-pressed");
-        }, 150);
+          btn.classList.remove("key-click");
+        }, 100);
       }
     }
   });
