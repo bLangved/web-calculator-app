@@ -1,7 +1,5 @@
 export const display = document.querySelector("#interfaceDisplay");
 export const btnClear = document.querySelector("#btnClear");
-export const btnToggleSign = document.querySelector("#btnToggleSign");
-export const btnPercent = document.querySelector("#btnPercent");
 export const btnDivide = document.querySelector("#btnDivide");
 export const btnMultiply = document.querySelector("#btnMultiply");
 export const btnSubtract = document.querySelector("#btnSubtract");

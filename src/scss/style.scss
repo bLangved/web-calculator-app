@@ -125,6 +125,9 @@ main {
     gap: 1em;
   }
 
+  & .triple-clear {
+    grid-column: span 3;
+  }
   & .double-zero {
     grid-column: span 2;
   }
