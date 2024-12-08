@@ -111,6 +111,9 @@ main {
     gap: 1em;
   }
 }
+.numpad-container .triple-clear {
+  grid-column: span 3;
+}
 .numpad-container .double-zero {
   grid-column: span 2;
 }
